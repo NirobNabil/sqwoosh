@@ -18,8 +18,8 @@
             angle_increment: 0.0087
             scan_time: 0.3333
             range_min: 1
-            range_max: 130
-            use_inf: false
+            range_max: 50
+            use_inf: true
     
             concurrency_level: 1
         </rosparam>
@@ -39,6 +39,7 @@
     <arg name="scan_subscriber_queue_size" default="5"/>
     <arg name="scan_topic" default="scan"/>
     <arg name="map_size" default="2048"/>
+    <param name="/use_sim_time" value="false"/>
 
     <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">
     
