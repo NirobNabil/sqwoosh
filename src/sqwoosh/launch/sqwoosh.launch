@@ -1,0 +1,38 @@
+<launch>
+
+    <!-- <include file="$(find wamv_gazebo)/launch/localization_example.launch" /> -->
+
+
+
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pc2_laser">
+        <remap from="cloud_in" to="/wamv/sensors/lidars/lidar_wamv/points" /> 
+        <remap from="scan" to="/scan" />
+        <rosparam>
+            target_frame: wamv/lidar_wamv_link
+            transform_tolerance: 0.1
+            min_height: 0.0
+            max_height: 1.1
+    
+            angle_min: -3.1416
+            angle_max: 3.1416
+            angle_increment: 0.0007
+            scan_time: 0.3333
+            range_min: 0.1
+            range_max: 13
+            use_inf: false
+    
+            concurrency_level: 1
+        </rosparam>
+    </node>
+    
+    <!-- <include file="$(find hector_slam_launch)/launch/tutorial.launch" /> -->
+
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping_test" output="screen">
+      <param name="base_frame" value = "wamv/base_link"/>
+      <param name="odom_frame" value = "wamv/odom"/>
+      <param name="maxRange" value="12" />
+    </node>
+
+</launch>
+
+    

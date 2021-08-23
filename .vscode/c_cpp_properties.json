@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/twin_n/vrx_ws/devel/include/**",
+        "/home/twin_n/workspace/ros1/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/twin_n/workspace/ros1/src/avb_bot/include/**",
+        "/home/twin_n/workspace/ros1/src/beginner_tutorials/include/**",
+        "/home/twin_n/workspace/ros1/src/freefloating_gazebo/include/**",
+        "/home/twin_n/workspace/ros1/src/learning_tf2/include/**",
+        "/home/twin_n/vrx_ws/src/vrx/usv_gazebo_plugins/include/**",
+        "/home/twin_n/vrx_ws/src/vrx/vrx_gazebo/include/**",
+        "/home/twin_n/vrx_ws/src/vrx/wave_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
